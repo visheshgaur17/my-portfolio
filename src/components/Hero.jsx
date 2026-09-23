@@ -29,8 +29,8 @@ const Hero = () => {
           </h1>
 
           <p className="mt-6 text-lg text-[#657786] dark:text-slate-300 leading-relaxed max-w-xl">
-            I transform data into meaningful insights using Python, SQL,
-            Power BI and machine learning.
+            I work with data to build dashboards, uncover insights and support better business decisions using Python, SQL and Power BI.
+
           </p>
 
           {/* Buttons */}
@@ -64,15 +64,37 @@ const Hero = () => {
         >
           <div className="relative">
             <div className="absolute inset-0 bg-[#DDD6F3] rounded-full blur-xl opacity-25 scale-105" />
+            {/* Analytics decoration */}
+            <div className="absolute -right-6 top-8 z-10 hidden md:flex items-center gap-2 px-3 py-2 rounded-xl bg-white/90 dark:bg-slate-800/90 border border-sky-100 dark:border-slate-700 shadow-md backdrop-blur-sm">
+              <span className="text-sky-500 text-sm">↗</span>
+              <span className="text-xs font-semibold text-slate-600 dark:text-slate-300">
+                Data → Insights
+              </span>
+            </div>
             <img
               src={profileImage}
               alt="Vishesh"
               className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-8 border-white shadow-xl"
             />
+            
           </div>
         </motion.div>
 
-      </div>
+            </div>
+
+      {/* Scroll indicator */}
+      <a
+        href="#about"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-400 dark:text-slate-500 hover:text-sky-500 transition-colors"
+      >
+        <span className="text-xs tracking-[0.2em] uppercase">
+          Scroll to explore
+        </span>
+
+        <span className="text-lg animate-bounce">
+          ↓
+        </span>
+      </a>
     </section>
   );
 };
