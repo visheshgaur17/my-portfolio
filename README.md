@@ -1,16 +1,91 @@
-# React + Vite
+# Vishesh Gaur — Data Analyst Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal portfolio website showcasing my experience, projects, technical skills, and work in data analytics and business intelligence.
 
-Currently, two official plugins are available:
+Built with React and Vite, with a focus on a clean, responsive interface and a simple user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Portfolio
 
-## React Compiler
+[Visit my portfolio] : https://my-portfolio-gilt-two-32.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## About
 
-## Expanding the Oxlint configuration
+I'm a Data Analyst focused on turning data into useful insights through analysis, reporting, visualization, and business intelligence.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+This portfolio brings together:
+
+* Professional experience
+* Data analytics and BI projects
+* Technical skills
+* Career background
+* Contact information
+
+## Featured Project
+
+### Stock Market Analytics — ML Prediction & Sentiment Dashboard
+
+A data analytics project combining financial market data, machine learning, sentiment analysis, and Power BI.
+
+**Key technologies:**
+
+* Python
+* Pandas
+* NumPy
+* SQL
+* SQLite
+* Scikit-learn
+* VADER Sentiment Analysis
+* Power BI
+* yfinance
+* Finnhub API
+
+The project analyzes stock market data, news sentiment, technical indicators, and machine-learning predictions through an interactive Power BI dashboard.
+
+## Tech Stack
+
+**Frontend**
+
+* React
+* Vite
+* JavaScript
+* HTML
+* CSS
+
+**Data & Analytics**
+
+* SQL
+* Python
+* Pandas
+* NumPy
+* Power BI
+* Excel
+* Tableau
+
+**Other**
+
+* Git
+* GitHub
+* REST APIs
+
+## Features
+
+* Responsive portfolio design
+* Light and dark mode
+* Projects showcase
+* Professional experience section
+* Skills and technologies
+* GitHub and LinkedIn links
+* Direct email contact
+* Contact form powered by Web3Forms
+
+## Contact
+
+**Email:** [visheshgaur276@gmail.com](mailto:visheshgaur276@gmail.com)
+
+**GitHub:** [@visheshgaur17](https://github.com/visheshgaur17)
+
+**LinkedIn:** [Vishesh Gaur](https://www.linkedin.com/in/vishesh-gaur-ba2935226/)
+
+---
+
+Built with React + Vite.
