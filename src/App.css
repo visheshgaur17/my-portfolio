@@ -531,111 +531,392 @@
    CONTACT SECTION
 ========================= */
 
+/* =========================
+   CONTACT SECTION
+========================= */
+
 .contact-section {
   padding: 100px 8%;
   background: #ffffff;
 }
 
 .contact-container {
-  max-width: 950px;
+  max-width: 1000px;
   margin: 45px auto 0;
-  padding: 50px;
+  padding: 48px;
   background: #f8fbff;
   border: 1px solid #dceaf5;
   border-radius: 24px;
+
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 55px;
+  grid-template-columns: 1fr 1.1fr;
+
+  gap: 48px;
   align-items: center;
+
   box-shadow: 0 12px 35px rgba(80, 120, 160, 0.07);
 }
 
-/* Left side */
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.contact-info {
+  min-width: 0;
+}
 
 .contact-icon {
   width: 48px;
   height: 48px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 14px;
+
   background: #e8f4ff;
   color: #4d91c7;
+
   font-size: 22px;
+
   margin-bottom: 18px;
 }
 
 .contact-info h3 {
   margin: 0 0 15px;
+
   color: #243447;
   font-size: 28px;
 }
 
 .contact-info p {
-  margin: 0 0 25px;
+  margin: 0 0 20px;
+
   color: #60758a;
+
   line-height: 1.8;
   font-size: 15px;
+
   max-width: 500px;
 }
 
 .contact-email {
+  display: inline-block;
+
   color: #4d91c7;
+
   font-weight: 600;
   text-decoration: none;
+
   word-break: break-word;
+
+  margin-bottom: 24px;
 }
 
 .contact-email:hover {
   text-decoration: underline;
 }
 
-/* Right side */
 
-.contact-links {
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.contact-social-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact-social-row a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px 16px;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #dceaf5;
+
+  color: #42637c;
+
+  text-decoration: none;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  transition: all 0.2s ease;
+}
+
+.contact-social-row a:hover {
+  transform: translateY(-2px);
+
+  border-color: #82bfe8;
+
+  color: #397da8;
+
+  box-shadow: 0 6px 16px rgba(80, 140, 180, 0.1);
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form-wrapper {
+  width: 100%;
+}
+
+.contact-form {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+
+  gap: 16px;
 }
 
-.contact-links a {
+.form-group {
   display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #243447;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 12px 16px;
+
+  box-sizing: border-box;
+
+  border-radius: 12px;
+
+  border: 1px solid #dceaf5;
+
+  background: #ffffff;
+
+  color: #243447;
+
+  font-size: 14px;
+
+  font-family: inherit;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+
+  min-height: 120px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9aabba;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+
+  border-color: #82bfe8;
+
+  box-shadow: 0 0 0 3px rgba(130, 191, 232, 0.2);
+}
+
+
+/* =========================
+   SEND BUTTON
+========================= */
+
+.contact-submit-btn {
+  display: inline-flex;
+
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px 18px;
-  border-radius: 12px;
-  background: #ffffff;
-  border: 1px solid #dceaf5;
-  color: #42637c;
-  text-decoration: none;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  padding: 12px 24px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #82bfe8;
+
+  color: #ffffff;
+
+  font-size: 15px;
   font-weight: 600;
-  transition: 0.2s ease;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
 }
 
-.contact-links a svg {
-  font-size: 18px;
+.contact-submit-btn:hover {
+  background: #62a3d1;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(100, 170, 215, 0.25);
 }
 
-.contact-links a:hover {
-  transform: translateY(-3px);
-  border-color: #82bfe8;
-  color: #397da8;
-  box-shadow: 0 8px 20px rgba(80, 140, 180, 0.1);
+.contact-submit-btn:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
 }
 
-/* Mobile */
 
-@media (max-width: 700px) {
+/* =========================
+   FORM STATUS MESSAGE
+========================= */
+
+.form-status-msg {
+  margin: 4px 0 0;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+.form-status-msg.success {
+  color: #059669;
+}
+
+.form-status-msg.error {
+  color: #dc2626;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
   .contact-section {
     padding: 70px 5%;
   }
 
   .contact-container {
     grid-template-columns: 1fr;
+
     padding: 30px;
-    gap: 30px;
+
+    gap: 36px;
   }
+
+}
+
+@media (max-width: 500px) {
+
+  .contact-container {
+    padding: 24px;
+  }
+
+  .contact-info h3 {
+    font-size: 24px;
+  }
+
+  .contact-submit-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark .contact-section {
+  background: #0f172a;
+}
+
+.dark .contact-container {
+  background: #111827;
+
+  border-color: #1e293b;
+}
+
+.dark .contact-info h3,
+.dark .form-group label {
+  color: #e5e7eb;
+}
+
+.dark .contact-info p {
+  color: #94a3b8;
+}
+
+.dark .contact-social-row a {
+  background: #1e293b;
+
+  border-color: #334155;
+
+  color: #cbd5e1;
+}
+
+.dark .contact-social-row a:hover {
+  border-color: #60a5fa;
+
+  color: #93c5fd;
+}
+
+.dark .form-group input,
+.dark .form-group textarea {
+  background: #1e293b;
+
+  border-color: #334155;
+
+  color: #e5e7eb;
+}
+
+.dark .form-group input::placeholder,
+.dark .form-group textarea::placeholder {
+  color: #64748b;
+}
+
+.dark .form-group input:focus,
+.dark .form-group textarea:focus {
+  border-color: #60a5fa;
+
+  box-shadow:
+    0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.dark .form-status-msg.success {
+  color: #34d399;
+}
+
+.dark .form-status-msg.error {
+  color: #f87171;
 }
 /* =========================
    FOOTER
