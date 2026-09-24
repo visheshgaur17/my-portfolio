@@ -383,32 +383,57 @@
     padding: 18px;
   }
 }
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
 .experience-section {
-  padding: 90px 8%;
+  padding: 100px 8%;
   background: #f8fbff;
 }
 
 .experience-container {
   max-width: 1050px;
-  margin: 45px auto 0;
+  margin: 50px auto 0;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 24px;
 }
 
+/* Experience card */
+
 .experience-card {
+  position: relative;
   background: #ffffff;
   border: 1px solid #dceaf5;
   border-radius: 20px;
   padding: 30px 35px;
-  box-shadow: 0 8px 25px rgba(80, 120, 160, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 8px 25px rgba(80, 120, 160, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  overflow: hidden;
+}
+
+/* Small accent line */
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #82bfe8;
+  border-radius: 20px 0 0 20px;
 }
 
 .experience-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(80, 120, 160, 0.14);
+  box-shadow: 0 14px 35px rgba(80, 120, 160, 0.12);
+  border-color: #c5e2f5;
 }
+
+/* Top section */
 
 .experience-top {
   display: flex;
@@ -430,14 +455,19 @@
   color: #6b86a0;
 }
 
+/* Year */
+
 .experience-top > span {
   padding: 7px 14px;
   border-radius: 20px;
   background: #e8f4ff;
   color: #4d91c7;
   font-size: 14px;
+  font-weight: 600;
   white-space: nowrap;
 }
+
+/* Description */
 
 .experience-description {
   margin: 22px 0;
@@ -445,6 +475,8 @@
   color: #60758a;
   max-width: 850px;
 }
+
+/* Skill tags */
 
 .experience-tags {
   display: flex;
@@ -459,7 +491,46 @@
   color: #52738f;
   font-size: 13px;
   border: 1px solid #dceaf5;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
+
+.experience-tags span:hover {
+  transform: translateY(-2px);
+  background: #e5f3fc;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .experience-section {
+    padding: 70px 5%;
+  }
+
+  .experience-card {
+    padding: 25px 25px 25px 28px;
+  }
+
+  .experience-top {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .experience-top h3 {
+    font-size: 21px;
+  }
+
+  .experience-top h4 {
+    font-size: 14px;
+  }
+
+  .experience-top > span {
+    align-self: flex-start;
+  }
+}
+/* =========================
+   CONTACT SECTION
+========================= */
+
 .contact-section {
   padding: 100px 8%;
   background: #ffffff;
@@ -468,14 +539,30 @@
 .contact-container {
   max-width: 950px;
   margin: 45px auto 0;
-  padding: 45px;
+  padding: 50px;
   background: #f8fbff;
   border: 1px solid #dceaf5;
   border-radius: 24px;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 50px;
+  gap: 55px;
   align-items: center;
+  box-shadow: 0 12px 35px rgba(80, 120, 160, 0.07);
+}
+
+/* Left side */
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #e8f4ff;
+  color: #4d91c7;
+  font-size: 22px;
+  margin-bottom: 18px;
 }
 
 .contact-info h3 {
@@ -489,6 +576,7 @@
   color: #60758a;
   line-height: 1.8;
   font-size: 15px;
+  max-width: 500px;
 }
 
 .contact-email {
@@ -502,6 +590,8 @@
   text-decoration: underline;
 }
 
+/* Right side */
+
 .contact-links {
   display: flex;
   flex-direction: column;
@@ -509,23 +599,32 @@
 }
 
 .contact-links a {
-  display: block;
-  padding: 13px 18px;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 12px;
   background: #ffffff;
   border: 1px solid #dceaf5;
   color: #42637c;
   text-decoration: none;
   font-weight: 600;
-  text-align: center;
   transition: 0.2s ease;
 }
 
+.contact-links a svg {
+  font-size: 18px;
+}
+
 .contact-links a:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: #82bfe8;
   color: #397da8;
+  box-shadow: 0 8px 20px rgba(80, 140, 180, 0.1);
 }
+
+/* Mobile */
 
 @media (max-width: 700px) {
   .contact-section {
@@ -542,40 +641,135 @@
    FOOTER
 ========================= */
 
-.footer {
-  padding: 35px 8%;
-  background: #17324d;
-  color: white;
+/* =========================
+   FOOTER
+========================= */
+
+.footer-wrapper {
+  padding: 50px 8% 40px;
+  background: #ffffff;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
 }
 
-.footer h3 {
-  margin: 0 0 6px;
-  font-size: 20px;
+.floating-footer {
+  background: #e8f4ff;
+  padding: 12px 28px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 8px 25px rgba(80, 120, 160, 0.07);
+  border: 1px solid #dceaf5;
 }
 
-.footer p {
+.footer-text {
   margin: 0;
-  color: #b9ccdc;
-  font-size: 14px;
+  color: #60758a;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
-.footer-copy {
-  text-align: right;
+.footer-text strong {
+  color: #17324d;
+  font-weight: 700;
+}
+
+/* Back to Top Button */
+
+.back-to-top-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid #dceaf5;
+  color: #4d91c7;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.back-to-top-btn:hover {
+  background: #4d91c7;
+  color: #ffffff;
+  border-color: #4d91c7;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 650px) {
-  .footer {
+  .floating-footer {
     flex-direction: column;
-    text-align: center;
+    border-radius: 20px;
+    padding: 16px 24px;
+    gap: 12px;
   }
+}
 
-  .footer-copy {
-    text-align: center;
-  }
+/* Dark Mode Adjustments */
+
+.dark .footer-wrapper {
+  background: #0f172a;
+}
+
+.dark .floating-footer {
+  background: #111827;
+  border-color: #1e293b;
+}
+
+.dark .footer-text {
+  color: #94a3b8;
+}
+
+.dark .footer-text strong {
+  color: #e5e7eb;
+}
+
+.dark .back-to-top-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #93c5fd;
+}
+
+.dark .back-to-top-btn:hover {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* =========================
+   DARK MODE ADJUSTMENTS
+========================= */
+
+/* Add these to your existing Dark Mode section */
+.dark .footer-wrapper {
+  background: #0f172a;
+}
+
+.dark .floating-footer {
+  background: #111827;
+  border-color: #1e293b;
+}
+
+.dark .footer-text {
+  color: #94a3b8;
+}
+
+.dark .footer-text strong {
+  color: #93c5fd;
+}
+
+.dark .footer-socials a {
+  color: #475569;
+}
+
+.dark .footer-socials a:hover {
+  color: #93c5fd;
 }
 /* =========================
    DARK MODE

@@ -71,11 +71,11 @@ function Projects() {
           </p>
 
           <div className="project-tools">
-            <span>Python</span>
-            <span>SQL</span>
-            <span>Power BI</span>
-            <span>Machine Learning</span>
-            <span>VADER</span>
+            <span className="project-tool">Python</span>
+            <span className="project-tool">SQL</span>
+            <span className="project-tool">Power BI</span>
+            <span className="project-tool">Machine Learning</span>
+            <span className="project-tool">VADER</span>
           </div>
 
           <a
